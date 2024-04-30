@@ -19,6 +19,6 @@ try {
     // Atur karakter koneksi ke UTF-8
     $dbh->exec('SET NAMES utf8');
 } catch (PDOException $e) {
-    // Tangani kesalahan koneksi
+    // Tangani kesalahan koneksi    
     die('Koneksi database gagal: ' . $e->getMessage());
 }

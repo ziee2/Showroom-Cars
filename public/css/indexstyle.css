@@ -395,3 +395,8 @@ button {
 .button_sort {
   color: aliceblue;
 }
+
+
+.tampil-image{
+  object-fit: cover;
+}
