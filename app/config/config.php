@@ -1,12 +1,12 @@
 <?php
+require_once 'env.php';
 
-define("BASEURL","http://localhost/PWEB/Tugas-crud-app-manager/public");
-
+define("BASEURL",$_ENV["BASEURL"]);
 // Konfigurasi koneksi ke database
-define('DB_HOST', 'localhost'); // Host basis data (biasanya 'localhost')
-define('DB_USER', 'root'); // Nama pengguna basis data
+define('DB_HOST', $_ENV['DB_HOST']); // Host basis data (biasanya 'localhost')
+define('DB_USER', $_ENV['DB_USER']); // Nama pengguna basis data
 define('DB_PASS', ''); // Kata sandi pengguna basis data
-define('DB_NAME', 'showroom_cars'); // Nama basis data
+define('DB_NAME', $_ENV['DB_NAME']); // Nama basis data
 
 // Buat koneksi ke database menggunakan PDO
 try {

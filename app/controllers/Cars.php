@@ -25,7 +25,7 @@ class Cars extends Controller {
 
   public function getUbahCars()
   {
-    echo json_encode($this->model("carsModel")->getCarsById($_POST["id"]));
+    echo json_encode($this->model("carsModel")->getCarsById($_POST["id_cars"]));
   }
 
   public function editCars()
@@ -37,7 +37,7 @@ class Cars extends Controller {
     } else{
       Flasher::setFlash('Data Cars', 'gagal', 'diubah', 'danger');
       header("Location:" . BASEURL . "/Cars");
-      exit;
+      exit; 
     }
   }
 

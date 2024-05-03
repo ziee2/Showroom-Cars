@@ -10,10 +10,10 @@ $(function () {
       dataType: 'json',
       success: function (data) {
         $('#id_cars').val(data.id_cars);
-        $('#type').val(data.type);
-        $('#deskripsi').val(data.deskripsi);
-        $('#stock').val(data.stock);
-        $('#price').val(data.price);
+        // $('#type').val(data.type);
+        // $('#deskripsi').val(data.deskripsi);
+        // $('#stock').val(data.stock);
+        // $('#price').val(data.price);
         // $('#image_path').val(data.image_path);
       },
     });

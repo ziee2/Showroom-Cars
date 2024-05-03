@@ -31,6 +31,7 @@
 <div class="main--content">
     <div class="row">
         <div class="col-lg-6">
+            <?php Flasher::flash(); ?>
         </div>
     </div>
         <div class="header--wrapper">
@@ -61,7 +62,12 @@
             <p class="card-text"><?= $Cars['deskripsi']; ?></p>
             <p class="card-text">Unit: <?= $Cars['stock']; ?></p>
             <p class="card-text"><small class="text-body-secondary">$<?= $Cars['price']; ?></small></p>
-            <td><a href="<?= BASEURL; ?>/Cars/editCars/<?= $Cars['id_cars']; ?>" class="badge text-bg-success float-center tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModalCars" data-id="<?= $Cars['id_cars']; ?>">Edit</a> <a href="<?= BASEURL; ?>/Cars/hapusCars/<?= $Cars['id_cars']; ?>" class="badge text-bg-danger float-center" onclick="return confirm('Apakah anda yakin?')">Hapus</a></td>
+            <td>
+                <a href="<?= BASEURL; ?>/Cars/editCars/<?= $Cars['id_cars']; ?>" class="tampilModalUbah badge text-bg-success float-center" data-bs-toggle="modal" data-bs-target="#formModalCars" data-id="<?= $Cars['id_cars']; ?>">Edit</a>
+
+
+                <a href="<?= BASEURL; ?>/Cars/hapusCars/<?= $Cars['id_cars']; ?>" class="badge text-bg-danger float-center" onclick="return confirm('Apakah anda yakin?')">Hapus</a>
+            </td>
         </div>
         </div>
     </div>
@@ -112,7 +118,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="image" class="form-label">Upload Gambar</label>
-                                <input type="file" class="form-control" id="image_path" name="image" required>
+                                <input type="file" class="form-control" id="image" name="image" required>
                             </div>
 
                             <div class="modal-footer">
@@ -124,3 +130,4 @@
             </div>
         </div>
     </div>
+
