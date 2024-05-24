@@ -2,7 +2,7 @@
 
 class Login extends Controller{
   public function index()
-  {;
+  {
     $this->view("Login/index");
   }
 
@@ -17,4 +17,5 @@ class Login extends Controller{
       exit;
     }
   }
+  
 }
